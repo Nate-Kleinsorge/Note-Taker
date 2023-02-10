@@ -3,7 +3,7 @@ const apiRoutes = require('./routes/apiRoutes');
 const htmlRoutes = require('./routes/htmlRoutes');
 
 const app = express();
-const port = 3001;
+const PORT = 3001;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -12,3 +12,5 @@ app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 
 app.listen(PORT, () => console.log(`port running on http://localhost:${PORT}`));
+
+module.exports = app;
